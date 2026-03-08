@@ -1,0 +1,22 @@
+services:
+  node-a:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/doslab/src
+      - ./open-watcom:/doslab/open-watcom
+      - ./docker/dosbox.conf:/doslab/dosbox.conf
+    tty: true
+    stdin_open: true
+
+  node-b:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/doslab/src
+      - ./open-watcom:/doslab/open-watcom
+      - ./docker/dosbox-b.conf:/doslab/dosbox.conf
+    tty: true
+    stdin_open: true
