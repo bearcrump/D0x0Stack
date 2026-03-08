@@ -17,4 +17,4 @@ WORKDIR /doslab
 #RUN chmod +x /doslab/open-watcom-c-dos-1.9.exe
 
 # Default command: launch DOSBox-X in foreground
-CMD ["dosbox-x", "-conf", "/doslab/dosbox.conf"]
+CMD ["dosbox-x", "-conf", "/doslab/dosbox.conf", "-noconsole"]
